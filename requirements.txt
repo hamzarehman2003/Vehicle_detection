@@ -1,12 +1,7 @@
-ultralytics
-detectron2
-torch>=1.12
-torchvision
-opencv-python
-imutils
 flask
-pyqt5        # or python-tk
-numpy
-pandas
-matplotlib
-filterpy     # if using SORT
+opencv-python
+ultralytics
+torch
+torchvision
+scipy
+pillow

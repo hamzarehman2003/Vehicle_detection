@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Results</title></head>
+<body>
+  <h1>Processing Complete ({{ metrics.model }})</h1>
+
+  <video width="640" controls>
+    <source src="{{ url_for('processed_video', filename=video_file) }}" type="video/mp4">
+  </video>
+
+  <h2>Metrics</h2>
+  <ul>
+    <li>Frames processed: {{ metrics.frames }}</li>
+    <li>Total time: {{ metrics.total_time | round(2) }} s</li>
+    <li>Average FPS: {{ metrics.avg_fps | round(1) }}</li>
+    <li>Counts: {{ metrics.counts }}</li>
+  </ul>
+
+  <a href="/">⟵ Process another video</a>
+</body>
+</html>
